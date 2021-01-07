@@ -31,7 +31,6 @@ final class SharedMemory
         # Initialise the memory
         $memory = $this->getMemory();
         shmop_write($memory, serialize([]), 0);
-        shmop_close($memory);
     }
 
 
@@ -91,7 +90,6 @@ final class SharedMemory
         $data = serialize($exceptions);
 
         shmop_write($memory, $data, 0);
-        shmop_close($memory);
     }
 
 
@@ -108,8 +106,6 @@ final class SharedMemory
 
         shmop_write($memory, serialize([]), 0);
 
-        shmop_close($memory);
-
         return $exceptions;
     }
 
@@ -124,7 +120,6 @@ final class SharedMemory
         $memory = shmop_open($this->key, "a", 0, 0);
         if ($memory) {
             shmop_delete($memory);
-            shmop_close($memory);
         }
     }
 }

@@ -28,10 +28,10 @@
         "phpunit/phpunit": "^8.4"
     },
     "autoload": {
-        "psr-4": {"ForkHelper\\Forker\\": "src/"}
+        "psr-4": {"duncan3dc\\Forker\\": "src/"}
     },
     "autoload-dev": {
-        "psr-4": {"ForkHelper\\ForkerTests\\": "tests/"}
+        "psr-4": {"duncan3dc\\ForkerTests\\": "tests/"}
     },
     "scripts": {
         "test": [
